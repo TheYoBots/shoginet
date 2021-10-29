@@ -72,6 +72,8 @@ git push --force origin new-branch
 
 Now that you have all you need, all you need to do is create a [new app in heroku](https://dashboard.heroku.com/new-app) (the name and region don't matter), then go to the `Deploy` tab and select `GitHub` under `Deployment method` and then scroll down and click on `search` and `connect` your fork/import of shoginet. Now you need to `Deploy` to the 'new-branch'/'heroku' and wait for the deployment to complete. Once it has been completed, go to the `Resources` tab and enable `worker` dynos and shoginet should start running soon!
 
+**Do note that the heroku stack must be set to `Container`. To do so you must download [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli#download-and-install) and set stack to `Container` with `heroku stack:set container`.**
+
 ## How it works
 
 Every once in a while shoginet running on your computer asks [lishogi.org](https://lishogi.org/) for some work. If someone requested analysis of their game on [lishogi.org](https://lishogi.org/), you may receive this work. The work is a simple json containing mainly the initial position and sequence of moves. You then run engine analysis on these data and send the results back to [lishogi.org](https://lishogi.org/).
