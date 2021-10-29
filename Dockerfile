@@ -8,6 +8,7 @@ FROM python:3.9
 
 WORKDIR /shoginet
 COPY ./YaneuraOu-by-gcc /shoginet/YaneuraOu-by-gcc
+COPY ./fishnet.ini /shoginet/fishnet.ini
 COPY ./shoginet.py /shoginet/shoginet.py
 COPY ./eval/nn.bin /shoginet/eval/nn.bin
 
