@@ -4,7 +4,7 @@ WORKDIR /shoginet
 
 RUN apt update && apt install -y git build-essential clang
 
-FROM python:3.9
+FROM python:3.10
 
 WORKDIR /shoginet
 COPY ./YaneuraOu-by-gcc /shoginet/YaneuraOu-by-gcc
