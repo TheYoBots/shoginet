@@ -42,9 +42,9 @@ def yaneuraou_filename() -> str:
     if os.name == "nt":
         return "YaneuraOu-%s%s.exe" % (machine, suffix)
     elif os.name == "os2" or sys.platform == "darwin":
-        return "YaneuraOu-by-gcc"
+        return "YaneuraOu-by-gcc-SSE42"
     else:
-        return "YaneuraOu-by-gcc%s" % suffix
+        return "YaneuraOu-by-gcc-SSE42"
 
 
 def fairy_filename() -> str:
@@ -61,6 +61,6 @@ def fairy_filename() -> str:
     if os.name == "nt":
         return "fairy-stockfish-largeboard_x86-64%s%s.exe" % (machine, suffix)
     elif os.name == "os2" or sys.platform == "darwin":
-        return "fairy-stockfish-largeboard_x86-64"
+        return "fairy-stockfish-largeboard_x86-64-modern"
     else:
-        return "fairy-stockfish-largeboard_x86-64%s" % suffix
+        return "fairy-stockfish-largeboard_x86-64-modern"
